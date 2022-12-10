@@ -5,6 +5,7 @@ more version version:
 
 # class
 * `arif.arifCreate`
+
   ```csharp
    arif.arifCreate a = new arif.arifCreate("...");
             Console.WriteLine(a.ReadString("..."));
@@ -12,6 +13,7 @@ more version version:
             Console.WriteLine(a.GetBool("..."));
   ```
 * `arif.arifCreateProperties`
+ 
  ```csharp
        arif. arifCreateProperties c = new arif.arifCreateProperties();
             c.CreateValue("abc","000");
