@@ -12,12 +12,11 @@ more version version:
             Console.WriteLine(a.GetBool("..."));
   ```
 * `arif.arifCreateProperties`
-
-* ```csharp
+ ```csharp
        arif. arifCreateProperties c = new arif.arifCreateProperties();
             c.CreateValue("abc","000");
             Console.WriteLine(c.GetData());
             Console.ReadLine();
  ```
  
-* `arifException`
+* `arif.arifException`
