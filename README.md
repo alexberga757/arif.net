@@ -13,7 +13,7 @@ more version version:
   ```
 * `arif.arifCreateProperties`
 * ```csharp
-*       arif. arifCreateProperties c = new arif.arifCreateProperties();
+       arif. arifCreateProperties c = new arif.arifCreateProperties();
             c.CreateValue("abc","000");
             Console.WriteLine(c.GetData());
             Console.ReadLine();
