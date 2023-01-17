@@ -60,6 +60,83 @@ namespace arif
       public bool GetBool(string name) {
         return bool.Parse(this.ReadString(name));
       }
+      public string ReadStringWithEscChar(string name) {
+        
+        string token = "";
+        int state = 0;
+        char[] charsarr = this.ReadString(name).ToCharArray();
+        for (int i = 0; i < charsarr.Length; i++)
+        {
+            string a = charsarr[i].ToString();
+            if (a == "\\")
+            {
+                if (state == 0)
+                {
+                    state = 1;
+                }
+                else if (state == 1)
+                {
+                    token += "\\";
+                    state = 0;
+                }
+
+            }
+            else if (a == "n")
+            {
+                if (state == 1)
+                {
+                    token += "\n";
+                    state = 0;
+                }
+                else
+                {
+                    token += a;
+                }
+            }
+            else if (a == "t")
+            {
+                if (state == 1)
+                {
+                    token += "\t";
+                    state = 0;
+                }
+                else
+                {
+                    token += a;
+                }
+            }
+            else if (a == "b")
+            {
+                if (state == 1)
+                {
+                    token += "\b";
+                    state = 0;
+                }
+                else
+                {
+                    token += a;
+                }
+            }
+            else if (a == "r")
+            {
+                if (state == 1)
+                {
+                    token += "\r";
+                    state = 0;
+                }
+                else
+                {
+                    token += a;
+                }
+            }
+            else
+            {
+                token += a;
+            }
+        }
+        return token;
+    
+      }
     }
    
 }
