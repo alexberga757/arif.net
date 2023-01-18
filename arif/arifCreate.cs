@@ -26,7 +26,7 @@ namespace arif
                 string[] Poperties = line[n].Split(':');
                 for (int i = 0; i < Poperties.Length; i++)
                 {
-                    if (Poperties[0] == content)
+                    if (npzero(Poperties[0]) == content)
                     {
 
                         if (i == 0)
@@ -137,6 +137,30 @@ namespace arif
         return token;
     
       }
+
+      private static string npzero(string name) {
+    char[] _name = name.ToCharArray();
+    string token = "";
+    int state = 0;
+    for (int i = 0;i < _name.Length;i++) {
+      string __name = _name[i].ToString();
+      if (__name == " ") {
+        
+        if (state == 0) {
+          state = 1;
+        }
+        else if (state == 2) {
+          token += __name;
+        }
+        
+      }
+      else {
+        state = 2;
+        token += __name;
+      }
+    }
+    return token;
+  }
     }
    
 }
