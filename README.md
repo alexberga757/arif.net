@@ -1,4 +1,4 @@
-# arif.net
+# arif.net (development pause)
 more version version:
 * [arif.js](github.com/alexberga757/arif/)
 
