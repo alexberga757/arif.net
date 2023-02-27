@@ -1,4 +1,5 @@
-# arif.net (development pause)
+# arif.net (development has stopped)
+
 more version version:
 * [arif.js](github.com/alexberga757/arif/)
 
@@ -22,3 +23,5 @@ more version version:
  ```
  
 * `arif.arifException`
+
+* 
